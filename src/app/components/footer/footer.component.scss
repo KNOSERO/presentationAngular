@@ -1,0 +1,21 @@
+.footer {
+    background-color: black;
+}
+
+.background__image {
+    width: 100vw;
+    height: 400px;
+    background:url("/assets/footer.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.description {
+    text-align: center;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
