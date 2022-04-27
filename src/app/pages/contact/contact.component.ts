@@ -12,4 +12,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selected(event: string) {
+    console.log(event);
+  }
 }

@@ -11,6 +11,9 @@ import { PostComponent } from './pages/post/post.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './components/nav/nav.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { ContactformComponent } from './components/contactform/contactform.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,15 +23,19 @@ import { NavComponent } from './components/nav/nav.component';
     CvgenerateComponent,
     PostComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    LayoutComponent,
+    ContactformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

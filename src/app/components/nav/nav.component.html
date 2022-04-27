@@ -1,8 +1,20 @@
-<div class="class">
-    <nav>
+<div class="top">
+    
+    <img class="logo"
+     src="/assets/footer.jpg"
+     alt="logo"
+     width="150px"
+     height="60px">
+    
+    <button (click)="changeHamburger()">
+        <mat-icon class="hamburger"> menu </mat-icon>
+    </button>
+    
+    <nav [ngClass]="hamburger ? 'nav' : ''">
         <a routerLink="/">home</a>
         <a routerLink="/post">post</a>
-        <a routerLink="/contact">contact</a>
+        <a routerLink="/contact">kontakt</a>
         <a routerLink="/cvgenerate">cvgenerate</a>
-    </nav>    
+    </nav>
+
 </div>

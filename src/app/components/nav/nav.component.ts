@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  public size = 1000;
 
-  ngOnInit(): void {
+  //Zmienna kontrolująca informacje aktywowanym hamburgerze
+  public hamburger = true;
+
+  changeHamburger() {
+    this.hamburger = !this.hamburger;
   }
 
+  ngOnInit(): void {
+    if (window.innerWidth > this.size) 
+      this.hamburger = false;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (window.innerWidth > this.size) 
+        this.hamburger = false;
+  }
 }
